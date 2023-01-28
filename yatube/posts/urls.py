@@ -1,9 +1,9 @@
 # posts/urls.py
 from django.urls import path
+
 from . import views
 
-# Эта строчка обязательна.
-# Без неё namespace работать не будет:
+
 app_name = 'posts'
 
 
