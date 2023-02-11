@@ -2,10 +2,8 @@
 {% block title %}Записи сообщества {{group.title}}{%endblock%}
 {% block content %}
   <h1>{{ group.title }}</h1>
-  <p>
-    {{ group.description }}
-  </p>
-  {% for post in posts %}
+  <p>{{ group.description }}</p>
+  {% for post in page_obj %}
     <ul>
       <li>
         Автор: {{ post.author.get_full_name }}
@@ -20,4 +18,5 @@
     {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
   <!-- под последним постом нет линии -->
+  {% include 'includes/paginator.html' %}
 {% endblock %}

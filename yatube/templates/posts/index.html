@@ -1,9 +1,8 @@
-<!-- templates/ice_cream/index.html -->
 {% extends 'base.html' %}
 {% block title %}Последние обновления на сайте{%endblock%}
 {% block content %}
   <h1>Последние обновления на сайте</h1>
-  {% for post in posts %}
+  {% for post in page_obj %}
     <ul>
       <li>
         Автор: {{ post.author.get_full_name }}
@@ -21,4 +20,5 @@
     {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
   <!-- под последним постом нет линии -->
+  {% include 'includes/paginator.html' %}
 {% endblock %}
