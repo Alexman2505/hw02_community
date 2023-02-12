@@ -19,7 +19,7 @@ def user_contact(request):
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['body']
             form.save()
-            return redirect('/thank-you/')
+            return redirect('')
         return render(request, 'users/contact.html', {'form': form})
     form = ContactForm()
     return render(request, 'users/contact.html', {'form': form})
