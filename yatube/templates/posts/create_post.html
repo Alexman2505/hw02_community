@@ -37,7 +37,7 @@
               </label>
               <select name="group" class="form-control" id="id_group">
                 <option value="" selected>---------</option>
-                <option value="1">{{ group.title }}</option>
+                <option value="{{group.pk}}">{{ group.title }}</option>
               </select>
               <small id="id_group-help" class="form-text text-muted">
                 Группа, к которой будет относиться пост
