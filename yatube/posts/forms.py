@@ -8,12 +8,9 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('text', 'group')
 
-
-"""
     def clean_text(self):
         data = self.cleaned_data['text']
         # это и есть проверка. Если данные ничего не содержат - выдаем ошибку
         if data == '':
             raise forms.ValidationError('Поле не заполнено')
         return data
-"""
